@@ -10,8 +10,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 const uri = process.env.MONGODB_URI || "mongodb://localhost:27017/";
-const db = process.env.DB_NAME || "customer";
-const collectionName = "FeedBack";
+const dbName = process.env.DB_NAME || "customer";
+const collectionName = "Bookings";
 
 const client = new MongoClient(uri);
 
@@ -20,25 +20,27 @@ async function startServer() {
         await client.connect();
         console.log("Successfully connected to MongoDB");
 
-        const database = client.db(db);
+        const database = client.db(dbName);
         const collection = database.collection(collectionName);
 
-        // Serve static files from the 'public' directory
+        // Serve static files from the 'client' directory
         app.use(express.static(path.join(__dirname, "../client")));
 
-        // form submission
+        // Form submission
         app.post("/form", async (req, res) => {
             const formData = req.body;
 
             try {
                 const result = await collection.insertOne(formData);
                 console.log("Data inserted to database", result.insertedId);
-                return res.status(201).json({ message: "Form data saved successfully!" });
+                return res.status(201).json({ message: "Form data saved successfully!", id: result.insertedId });
             } catch (err) {
                 console.error("Failed to insert data", err);
                 return res.status(500).json({ message: "Error saving form data", error: err });
             }
         });
+
+        // Endpoint to get all form data
         app.get("/formData", async (req, res) => {
             try {
                 const formData = await collection.find({}).toArray();

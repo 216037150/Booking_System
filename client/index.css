@@ -1,0 +1,67 @@
+body {
+    background-image: url("ocean.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
+    height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0; 
+}
+
+.waterfront {
+    
+    background-size: cover;  /* Ensures the background image covers the entire element */
+    background-repeat: no-repeat;  /* Prevents the background image from repeating */
+    background-position: center;  /* Centers the background image */
+    text-align: center;
+    height: 200px;
+    width: 700px;
+    border-radius: 10px;
+    margin: 20px auto;
+    padding: 50px;
+    align-items: center;  /* Centers items vertically */
+    justify-content: center;  /* Centers items horizontally */
+    color: white;
+    font-family: sans-serif;
+    font-size: large;
+    background-color: rgb(7, 106, 152);  /* Fallback background color */
+}
+.btn {
+    display: inline-block;
+    padding: 10px 10px;
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    width: 150px;
+    background-color: rgb(108, 203, 203);
+    border-radius: 20px;
+}
+
+.btn:hover {
+    background-color: rgb(156, 220, 164);
+    color: aqua;
+}
+a {
+    text-decoration: none;
+}
+
+.booking-form{
+    text-align: center;
+    width: 400px;
+    height: 500px;
+    background-color: aqua;
+    border-radius: 10px;
+}

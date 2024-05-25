@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutors</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        form input, textarea {
+            background-color: #eaf0ff;
+            border-radius: 5px;
+        }
+    </style>
+    <link rel="stylesheet" href="bookingstyle.css">
+</head>
+<body>
+    <header style="padding-top: 10px;">
+        <div class="header-container">
+            <span style="margin-left: 2%;" class="logo">
+                <img src="images/logo.jpeg" alt="logo" style="width: 100px; border-radius: 50px;">
+            </span>
+            <nav class="nav-menu">
+                <ul>
+                    <span class="text-center" style="padding-top: 40px; padding-bottom: 20px; padding-right: 30px;">
+                    </span>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <center>
+        <form id="form">
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" name="fullName">
+
+            <label for="email2">Email Address:</label>
+            <input type="email" id="email2" name="email">
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" title="Please enter a 10-digit phone number">
+
+            <label for="date">Choose Date:</label>
+            <input type="date" id="date" name="date">
+
+            <label for="time">Choose Time:</label>
+            <select id="time" name="time">
+                <option value="">Select a time</option>
+                <option value="Morning">10:00 - 13:00</option>
+                <option value="Afternoon">15:00 - 17:00</option>
+                <option value="Evening">18:00 - 20:00</option>
+            </select>
+            <button type="button" onclick="validateForm()">Book</button>
+        </form>
+    </center>
+    <footer>
+        <div>
+            <span style="margin-left: 3%;">
+                <img src="images/logo.jpeg" style="width: 100px; border-radius: 50px;" alt="">
+            </span>
+        </div>
+        <button style="display: flex; background-color: aqua; margin-left: 10%; justify-content: center;" onclick="window.location.href='http://localhost:8000/displayData.html'">View Bookings</button>
+        <div class="social-icon" style="margin-right: 2%;">
+            <span style="color: aliceblue; margin-left: 2%;">
+                <i class="far fa-envelope"></i>siyabongazungu95@gmail.com
+                <br>
+                <i class="fas fa-phone"></i>0609360457
+                <br>
+                <i class="fas fa-map-marker-alt"></i> 123 Main Road Salt River
+            </span>
+        </div>
+    </footer>
+  <script src="bookingValidation.js"></script>
+  <script src="sendData.js"></script>
+</body>
+</html>

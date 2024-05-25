@@ -1,0 +1,74 @@
+body {
+  background-image: url("ocean.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  justify-content: center;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Set min-height to 100vh for full viewport height */
+  background-attachment: fixed; /* Keep the background image fixed */
+}
+
+
+form {
+  background-color: rgba(234, 240, 255, 0.9); /* Adjust background color with opacity */
+  background-image: url("ocean.jpg");
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px  rgb(19, 127, 155);
+  width: 300px;
+  margin: auto; /* Center the form horizontally */
+  margin-top: 10%; /* Adjust top margin as needed */
+  margin-bottom: 15%;
+}
+
+input,
+select {
+  width: calc(100% - 16px); /* Adjust width to accommodate padding */
+  padding: 8px;
+  margin-bottom: 12px;
+  box-sizing: border-box;
+}
+
+button {
+  color: #000;
+  padding: 20px;
+  cursor: pointer;
+  height: 50px;
+  width: 200px;
+  justify-content: center;
+  border-radius: 50px;
+  background-color: rgb(4, 128, 156);
+}
+
+
+.header-container {
+  background-image: url("ocean.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  height: 100px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-image: url("ocean.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  position: fixed; 
+  bottom: 0; 
+  z-index: 1000;
+  height: 70px;
+}

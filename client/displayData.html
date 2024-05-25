@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Form Data</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bookings Data</h1>
+    <div id="data-container"></div>
+    <script>
+        async function fetchData() {
+            try {
+                const response = await fetch('/formData');
+                const data = await response.json();
+                const dataContainer = document.getElementById('data-container');
+
+                if (data.length === 0) {
+                    dataContainer.textContent = 'No data available.';
+                    return;
+                }
+
+                const table = document.createElement('table');
+
+                // Create table header
+                const headerRow = table.insertRow();
+                Object.keys(data[0]).forEach(key => {
+                    const headerCell = document.createElement('th');
+                    headerCell.textContent = key;
+                    headerRow.appendChild(headerCell);
+                });
+
+                // Create table body
+                data.forEach(item => {
+                    const row = table.insertRow();
+                    Object.values(item).forEach(value => {
+                        const cell = row.insertCell();
+                        cell.textContent = value;
+                    });
+                });
+
+                dataContainer.appendChild(table);
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        }
+        fetchData();
+    </script>
+</body>
+</html>
