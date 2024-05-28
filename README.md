@@ -11,7 +11,7 @@ To run this application, you need to have the following installed:
     npm (Node Package Manager)
     MongoDB
 
-# Backend (Node.js with Express)
+# Backend (Node.js with Express) ; Serve-side
 
 The backend is implemented in server.js and provides the following functionalities:
 
@@ -33,5 +33,5 @@ The backend is implemented in server.js and provides the following functionaliti
     > MONGODB_URI: The URI for the MongoDB database. Default is mongodb://localhost:27017/.
     > DB_NAME: The name of the database. Default is customer.
 
-# Frontend (HTML, CSS, JavaScript)
+# Frontend (HTML, CSS, JavaScript): client-side
   The frontend is located in the client directory and consists of an HTML form styled with CSS and interactivity added with JavaScript.
