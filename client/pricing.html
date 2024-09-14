@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* Basic reset for body */
+body {
+    /* background-image: url("./images/AI-in-online-learning.webp"); */
+    background-image: url("./images/alx.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
+    height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Style for the header */
+header { 
+color: #fff; 
+padding: 10px 0;
+padding-left: 58px;
+background-color: black;
+overflow: hidden;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+z-index: 1;
+}
+
+/* Container for header elements */
+.header-container {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+/* Logo styling */
+.logo img {
+display: block;
+margin: 0 auto; 
+}
+
+/* Banner text styling */
+.banner-text {
+font-size: 18px;
+}
+
+/* Navigation menu styling */
+.nav-menu {
+margin: 0;
+padding: 0;
+}
+
+.nav-menu ul {
+list-style: none;
+margin: 0;
+padding: 0;
+text-align: right;
+}
+
+.nav-menu li {
+display: inline-block;
+margin-right: 20px;
+position: relative;
+}
+
+.nav-menu a {
+text-decoration: none;
+color: #fff;
+font-weight: bold;
+font-size: 14px;
+transition: color 0.3s ease;
+text-transform: uppercase;
+}
+
+.nav-menu a:hover {
+color: #6AA75A; 
+}
+
+/* Underline effect for navigation links */
+.nav-menu ul li::after {
+content: '';
+height: 3px;
+width: 0;
+background: #6AA75A;
+position: absolute;
+left: 0;
+bottom: -10px;
+transition: width 0.5s ease;
+}
+
+.nav-menu ul li:hover::after {
+width: 100%;
+}
+
+/* Ensure content does not overlap with the fixed header */
+body::before {
+content: '';
+display: block;
+height: 60px; /* Adjust based on header height */
+visibility: hidden;
+}
+
+</style>
+</head>
+<header>
+<div class="header-container">
+    <span style="margin-left: -2%;color:red; font-size: 40px;"class="logo"><b>EduTech</b></span>
+    <nav class="nav-menu">
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="services.html">SERVICES</a></li>
+        <li><a href="pricing.html">PRICING</a></li>
+        <li><a href="booking.html">BOOK US</a></li>
+        <span class="text-center" style="padding-top: 40px;padding-bottom: 20px;padding-right: 150px;">
+        </span>
+      </ul>
+    </nav>
+  </div>
+</header>
+<body>
+    <p class="description">At EduTech Innovators, we provide cutting-edge educational technology solutions to enhance learning experiences. Explore our innovative tools and resources designed to foster educational growth and success.</p>
+
+</body>
+</html>

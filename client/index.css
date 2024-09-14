@@ -1,5 +1,7 @@
 body {
     background-image: url("ocean.jpg");
+    /* background-image: url("./images/alx.jpeg"); */
+
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -14,6 +16,8 @@ body {
 h1 {
     text-align: center;
     margin: 20px 0; 
+    margin-top: -50px;
+    /* color: white; */
 }
 
 .waterfront {

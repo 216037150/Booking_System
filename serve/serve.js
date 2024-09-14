@@ -9,9 +9,10 @@ const PORT = process.env.PORT || 8000;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-const uri = process.env.MONGODB_URI || "mongodb://localhost:27017/";
-const dbName = process.env.DB_NAME || "customer";
-const collectionName = "Bookings";
+// const uri = process.env.MONGODB_URI || "mongodb://localhost:27017/";
+const uri = process.env.MONGODB_URI || "mongodb+srv://siyabongazungu95:Siyabonga%40100@cluster0.kp8zlnn.mongodb.net/";
+const dbName = process.env.DB_NAME || "EduTech";
+const collectionName = "Students";
 
 const client = new MongoClient(uri);
 
@@ -52,7 +53,7 @@ async function startServer() {
         });
 
         app.listen(PORT, () => {
-            console.log(`Server is running on port ${PORT}`);
+            console.log(`Server is running on 192.168.43.27:${PORT}`);
         });
     } catch (err) {
         console.error("Failed to connect to MongoDB", err);

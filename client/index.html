@@ -5,14 +5,128 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book your space</title>
     <link rel="stylesheet" href="index.css">
+    
+    <style>
+        /* Basic reset for body */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Style for the header */
+header { 
+    color: #fff; 
+    padding: 10px 0;
+    padding-left: 58px;
+    background-color: black;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+/* Container for header elements */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo styling */
+.logo img {
+    display: block;
+    margin: 0 auto; 
+}
+
+/* Banner text styling */
+.banner-text {
+    font-size: 18px;
+}
+
+/* Navigation menu styling */
+.nav-menu {
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+}
+
+.nav-menu li {
+    display: inline-block;
+    margin-right: 20px;
+    position: relative;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 14px;
+    transition: color 0.3s ease;
+    text-transform: uppercase;
+}
+
+.nav-menu a:hover {
+    color: #6AA75A; 
+}
+
+/* Underline effect for navigation links */
+.nav-menu ul li::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #6AA75A;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: width 0.5s ease;
+}
+
+.nav-menu ul li:hover::after {
+    width: 100%;
+}
+
+/* Ensure content does not overlap with the fixed header */
+body::before {
+    content: '';
+    display: block;
+    height: 60px; /* Adjust based on header height */
+    visibility: hidden;
+}
+
+    </style>
 </head>
+<header>
+    <div class="header-container">
+        <span style="margin-left: -2%;color:red; font-size: 40px;"class="logo"><b>EduTech</b></span>
+        <nav class="nav-menu">
+          <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="services.html">SERVICES</a></li>
+            <li><a href="pricing.html">PRICING</a></li>
+            <li><a href="booking.html">BOOK US</a></li>
+            <span class="text-center" style="padding-top: 40px;padding-bottom: 20px;padding-right: 150px;">
+            </span>
+          </ul>
+        </nav>
+      </div>
+</header>
 <body>
-    <h1>Welcome to the Ocean</h1>
+    <h1>Welcome to EduTech Innovators</h1>    
     <div class="waterfront">
-        <p class="description">The waterfront is a beautiful place where you can relax and enjoy the ocean view.</p>
-        <p class="highlight">Don't miss the sunset!</p> 
-        <p> Do you want to visit the waterfront?</p><br>
-        <a class="btn" href="booking.html">YES</a>   
+            <p class="highlight">Discover how our solutions can transform your learning journey!</p>
+            <p>Interested in learning more about our offerings?</p><br>
+            <a class="btn" href="booking.html">Learn More</a>  
      </div>  
 </body>
+
 </html>

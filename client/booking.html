@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,27 +9,123 @@
     <script src="script.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        form input, textarea {
-            background-color: #eaf0ff;
-            border-radius: 5px;
-        }
+        /* Basic reset for body */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Style for the header */
+header { 
+    color: #fff; 
+    padding: 10px 0;
+    padding-left: 58px;
+    background-color: black;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+/* Container for header elements */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo styling */
+.logo img {
+    display: block;
+    margin: 0 auto; 
+}
+
+/* Banner text styling */
+.banner-text {
+    font-size: 18px;
+}
+
+/* Navigation menu styling */
+.nav-menu {
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+}
+
+.nav-menu li {
+    display: inline-block;
+    margin-right: 20px;
+    position: relative;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 14px;
+    transition: color 0.3s ease;
+    text-transform: uppercase;
+}
+
+.nav-menu a:hover {
+    color: #6AA75A; 
+}
+
+/* Underline effect for navigation links */
+.nav-menu ul li::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #6AA75A;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: width 0.5s ease;
+}
+
+.nav-menu ul li:hover::after {
+    width: 100%;
+}
+
+/* Ensure content does not overlap with the fixed header */
+body::before {
+    content: '';
+    display: block;
+    height: 60px; /* Adjust based on header height */
+    visibility: hidden;
+}
+
     </style>
     <link rel="stylesheet" href="bookingstyle.css">
 </head>
-<body>
-    <header style="padding-top: 10px;">
-        <div class="header-container">
-            <span style="margin-left: 2%;" class="logo">
-                <img src="images/logo.jpeg" alt="logo" style="width: 100px; border-radius: 50px;">
+
+<header>
+    <div class="header-container">
+        <span style="margin-left: -2%;color:red; font-size: 40px;"class="logo"><b>EduTech</b></span>
+        <nav class="nav-menu">
+          <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="services.html">SERVICES</a></li>
+            <li><a href="pricing.html">PRICING</a></li>
+            <li><a href="booking.html">BOOK US</a></li>
+            <span class="text-center" style="padding-top: 40px;padding-bottom: 20px;padding-right: 150px;">
             </span>
-            <nav class="nav-menu">
-                <ul>
-                    <span class="text-center" style="padding-top: 40px; padding-bottom: 20px; padding-right: 30px;">
-                    </span>
-                </ul>
-            </nav>
-        </div>
-    </header>
+          </ul>
+        </nav>
+      </div>
+</header>
+
+<body> 
     <center>
         <form id="form">
             <label for="fullName">Full Name:</label>
@@ -50,27 +147,32 @@
                 <option value="Afternoon">15:00 - 17:00</option>
                 <option value="Evening">18:00 - 20:00</option>
             </select>
+            <div style="display: flex;">
             <button type="button" onclick="validateForm()">Book</button>
+            <a href="http://localhost:8000/" style="background-color: red; padding: 10px 20px; color: white; text-decoration: none; border-radius: 5px; text-align: center;     width: 150px;
+border-radius: 30px;">Back</a>            </div>
         </form>
     </center>
     <footer>
         <div>
             <span style="margin-left: 3%;">
-                <img src="images/logo.jpeg" style="width: 100px; border-radius: 50px;" alt="">
+                <!-- <img src="images/logo.jpeg" style="width: 100px; border-radius: 50px;" alt=""> -->
             </span>
         </div>
-        <button style="display: flex; background-color: aqua; margin-left: 10%; justify-content: center;" onclick="window.location.href='http://localhost:8000/displayData.html'">View Bookings</button>
+        <button style="display: flex; background-color: aqua; margin-left: 15%; justify-content: center;"
+            onclick="window.location.href='http://localhost:8000/displayData.html'">View Bookings</button>
         <div class="social-icon" style="margin-right: 2%;">
-            <span style="color: aliceblue; margin-left: 2%;">
-                <i class="far fa-envelope"></i>siyabongazungu95@gmail.com
+            <span style="color: rgb(37, 111, 175); margin-left: 2%;">
+                <i class="far fa-envelope"></i> info@telkom.com
                 <br>
-                <i class="fas fa-phone"></i>0609360457
+                <i class="fas fa-phone"></i> +91 218326767
                 <br>
-                <i class="fas fa-map-marker-alt"></i> 123 Main Road Salt River
+                <i class="fas fa-map-marker-alt"></i> Umhlanga Rocks, South Africa
             </span>
         </div>
     </footer>
-  <script src="bookingValidation.js"></script>
-  <script src="sendData.js"></script>
+    <script src="bookingValidation.js"></script>
+    <script src="sendData.js"></script>
 </body>
+
 </html>

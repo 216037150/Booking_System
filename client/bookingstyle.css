@@ -1,17 +1,30 @@
 body {
-  background-image: url("ocean.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  justify-content: center;
+  /* background-image: url("ocean.jpg"); */
+  /* background-image: url("./images/AI-in-online-learning.webp"); */
   margin: 0;
+  padding: 0;
   font-family: 'Arial', sans-serif;
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Set min-height to 100vh for full viewport height */
+  min-height: 100vh; /* Full viewport height */
+  background-image: url('./images/alx.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   background-attachment: fixed; /* Keep the background image fixed */
+  background-color: rgba(0, 0, 0, 0.3); /* Optional: Add a color overlay for better readability */
+  animation: fadeInBackground .2s ease-in-out;
 }
 
+/* Animation for background */
+@keyframes fadeInBackground {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
 
 form {
   background-color: rgba(234, 240, 255, 0.9); /* Adjust background color with opacity */
@@ -41,21 +54,8 @@ button {
   width: 200px;
   justify-content: center;
   border-radius: 50px;
-  background-color: rgb(4, 128, 156);
-}
-
-
-.header-container {
-  background-image: url("ocean.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  justify-content: center;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-  height: 100px;
+  /* background-color: rgb(4, 128, 156); */
+  background-color: rgb(47, 190, 47);
 }
 
 footer {
