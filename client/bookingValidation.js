@@ -1,5 +1,5 @@
 function validateEmail(email) {
-  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const regex = /^[^\s@]+@gmail\.com$/;
   return regex.test(email);
 }
 
@@ -23,7 +23,7 @@ function validateForm() {
   }
 
   if (!validateEmail(emailInput.value)) {
-      showAlert("Please enter a valid email address.");
+      showAlert("Please enter a valid Gmail address.");
       return;
   }
 
@@ -37,18 +37,18 @@ function validateForm() {
       return;
   }
 
- if (!dateInput.value) {
-     showAlert("Please choose a date.");
-     return;
+  if (!dateInput.value) {
+      showAlert("Please choose a date.");
+      return;
   }
 
-var currentDate = new Date();
-var selectedDate = new Date(dateInput.value);
+  var currentDate = new Date();
+  var selectedDate = new Date(dateInput.value);
 
-if (selectedDate <= currentDate) {
- showAlert("Please choose a future date.");
-  return;
-}
+  if (selectedDate <= currentDate) {
+      showAlert("Please choose a future date.");
+      return;
+  }
 
   if (!timeInput.value) {
       showAlert("Please choose a time.");
@@ -86,4 +86,3 @@ function removeAlert() {
       existingAlert.parentNode.removeChild(existingAlert);
   }
 }
-

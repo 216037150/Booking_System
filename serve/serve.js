@@ -53,7 +53,7 @@ async function startServer() {
         });
 
         app.listen(PORT, () => {
-            console.log(`Server is running on 192.168.43.27:${PORT}`);
+            console.log(`Server is running on http:\\localhost:${PORT}`);
         });
     } catch (err) {
         console.error("Failed to connect to MongoDB", err);
